@@ -1,26 +1,27 @@
 package com.example;
 
 import org.junit.Test;
+
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
+
 
 import java.util.Collections;
 
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
-public class CatTestGetFootValue {
+public class CatTestGetSoundValue {
 
     @Mock
     Feline feline;
 
     @Test
-    public void LionReturnValidValue() throws Exception {
+    public void CatTestGetSoundValidValue() {
         Cat cat = new Cat(feline);
-        Mockito.when(cat.getFood()).thenReturn(Collections.singletonList("Животные, Птицы, Рыба"));
-        assertEquals("[Животные, Птицы, Рыба]", cat.getFood().toString());
+        assertEquals("Мяу", cat.getSound());
 
     }
 

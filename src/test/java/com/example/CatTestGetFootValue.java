@@ -1,7 +1,5 @@
 package com.example;
 
-import com.example.Lion;
-import com.example.Predator;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -13,16 +11,16 @@ import java.util.Collections;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
-public class LionTestGetFootValue {
+public class CatTestGetFootValue {
 
     @Mock
-    Predator predator;
+    Feline feline;
 
     @Test
-    public void LionReturnValidValue() throws Exception {
-        Lion lion = new Lion(predator);
-        Mockito.when(lion.getFood()).thenReturn(Collections.singletonList("Животные, Птицы, Рыба"));
-        assertEquals("[Животные, Птицы, Рыба]", lion.getFood().toString());
+    public void CatTestGetFootValidValue() throws Exception {
+        Cat cat = new Cat(feline);
+        Mockito.when(cat.getFood()).thenReturn(Collections.singletonList("Животные, Птицы, Рыба"));
+        assertEquals("[Животные, Птицы, Рыба]", cat.getFood().toString());
 
     }
 

@@ -10,17 +10,13 @@ import java.util.Collections;
 
 import static org.junit.Assert.assertEquals;
 
-@RunWith(MockitoJUnitRunner.class)
-public class CatTestGetFootValue {
 
-    @Mock
-    Feline feline;
+public class FelineTestEatMeatValue {
 
     @Test
-    public void LionReturnValidValue() throws Exception {
-        Cat cat = new Cat(feline);
-        Mockito.when(cat.getFood()).thenReturn(Collections.singletonList("Животные, Птицы, Рыба"));
-        assertEquals("[Животные, Птицы, Рыба]", cat.getFood().toString());
+    public void FelineTestEatMeatValidValue() throws Exception {
+        Feline feline = new Feline();
+        assertEquals("[Животные, Птицы, Рыба]", feline.eatMeat().toString());
 
     }
 

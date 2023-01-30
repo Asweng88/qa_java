@@ -1,4 +1,4 @@
-package lion;
+package com.example;
 import com.example.Kittens;
 import com.example.Lion;
 import org.junit.Test;
@@ -16,7 +16,7 @@ public class LionTestGetKittensValue {
     Kittens kittens;
 
     @Test
-    public void LionReturnValidValue() {
+    public void LionTestGetKittensValidValue() {
         Lion lion = new Lion(kittens);
         Mockito.when(lion.getKittens()).thenReturn(1);
         assertEquals(1, lion.getKittens());

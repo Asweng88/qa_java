@@ -1,4 +1,4 @@
-package lion;
+package com.example;
 
 import com.example.Lion;
 import com.example.Predator;
@@ -19,7 +19,7 @@ public class LionTestGetFootValue {
     Predator predator;
 
     @Test
-    public void LionReturnValidValue() throws Exception {
+    public void LionTestGetFootValidValue() throws Exception {
         Lion lion = new Lion(predator);
         Mockito.when(lion.getFood()).thenReturn(Collections.singletonList("Животные, Птицы, Рыба"));
         assertEquals("[Животные, Птицы, Рыба]", lion.getFood().toString());
