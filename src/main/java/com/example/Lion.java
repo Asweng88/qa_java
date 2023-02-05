@@ -16,18 +16,13 @@ public class Lion {
         }
     }
 
-    private Predator predator;
-    private Kittens kittens;
-
-    public Lion(Predator predator) {
-        this.predator=predator;
-    }
-    public Lion(Kittens kittens) {
-        this.kittens=kittens;
+    Predator predator;
+    public Lion(Feline feline) {
+        this.predator = feline;
     }
 
     public int getKittens() {
-        return kittens.getKittens();
+        return predator.getKittens();
     }
 
     public boolean doesHaveMane() {
