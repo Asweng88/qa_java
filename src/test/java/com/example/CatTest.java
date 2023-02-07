@@ -18,7 +18,7 @@ public class CatTest {
     Feline feline;
 
     @Test
-    public void CatTestGetFootValidValue() throws Exception {
+    public void catTestGetFootValidValue() throws Exception {
         ArrayList<String> result = new ArrayList<>(Arrays.asList("Животные", "Птицы", "Рыба"));
 
         Cat cat = new Cat(feline);
@@ -27,7 +27,7 @@ public class CatTest {
     }
 
     @Test
-    public void CatTestGetSoundValidValue() {
+    public void catTestGetSoundValidValue() {
         Cat cat = new Cat(feline);
         assertEquals("Мяу", cat.getSound());
 

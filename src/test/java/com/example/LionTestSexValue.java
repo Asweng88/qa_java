@@ -25,10 +25,11 @@ public class LionTestSexValue {
         };
     }
 
-
     @Test
-    public void LionReturnValidValue() throws Exception {
-        Lion lion = new Lion(sex);
+    public void lionReturnValidValue() throws Exception {
+        Predator feline = new Feline();
+        Lion lion = new Lion((Feline) feline, sex);
+
         System.out.println(lion.doesHaveMane());
         assertEquals(value, lion.doesHaveMane());
 

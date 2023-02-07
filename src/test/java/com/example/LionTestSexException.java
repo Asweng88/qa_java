@@ -30,11 +30,11 @@ public class LionTestSexException {
 
 
     @Test
-    public void LionReturnExceptionValue() throws Exception {
+    public void lionReturnExceptionValue() throws Exception {
         AtomicReference<Lion> lion = null;
+        Predator feline = new Feline();
 
-
-        Exception exception = Assert.assertThrows("Проверка exception", Exception.class, () -> lion.set(new Lion(sex)));
+        Exception exception = Assert.assertThrows("Проверка exception", Exception.class, () -> lion.set(new Lion((Feline) feline, sex)));
         assertEquals("Используйте допустимые значения пола животного - самец или самка", exception.getMessage());
 
     }

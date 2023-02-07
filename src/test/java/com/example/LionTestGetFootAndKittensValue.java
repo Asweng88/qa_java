@@ -19,17 +19,17 @@ public class LionTestGetFootAndKittensValue {
     Feline feline;
 
     @Test
-    public void LionTestGetFootValidValue() throws Exception {
+    public void lionTestGetFootValidValue() throws Exception {
         ArrayList<String> result = new ArrayList<>(Arrays.asList("Животные", "Птицы", "Рыба"));
 
-        Lion lion = new Lion(feline);
+        Lion lion = new Lion(feline,"Самец");
         Mockito.when(feline.eatMeat()).thenReturn(result);
         assertEquals(result, lion.getFood());
     }
 
     @Test
-    public void LionTestGetKittensValidValue() {
-        Lion lion = new Lion(feline);
+    public void lionTestGetKittensValidValue() throws Exception {
+        Lion lion = new Lion(feline,"Самец");
         Mockito.when(feline.getKittens()).thenReturn(1);
         assertEquals(1, lion.getKittens());
 
